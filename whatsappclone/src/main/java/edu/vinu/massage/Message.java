@@ -2,7 +2,6 @@ package edu.vinu.massage;
 
 import edu.vinu.chat.Chat;
 import edu.vinu.common.BaseAuditingEntity;
-import edu.vinu.user.UserConstant;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -45,6 +44,6 @@ public class Message extends BaseAuditingEntity {
     @Column(name = "receiver_id", nullable = false)
     private String receiverId;
 
-    private String mediaPath;
+    private String mediaFilePath;
 
 }

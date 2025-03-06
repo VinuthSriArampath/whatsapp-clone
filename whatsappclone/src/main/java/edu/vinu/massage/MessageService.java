@@ -69,7 +69,7 @@ public class MessageService {
         message.setReceiverId(recipientId);
         message.setType(MessageType.IMAGE);
         message.setState(MessageState.SENT);
-        message.setMediaPath(filePath);
+        message.setMediaFilePath(filePath);
 
         messageRepository.save(message);
 

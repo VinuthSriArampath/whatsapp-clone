@@ -1,5 +1,6 @@
 package edu.vinu.massage;
 
+import edu.vinu.file.FileUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +14,7 @@ public class MessageMapper {
                 .senderId(message.getSenderId())
                 .receiverId(message.getReceiverId())
                 .createdAt(message.getCreatedDate())
-                //todo read the media file
+                .media(FileUtils.readFileFromLocation(message.getMediaFilePath()))
                 .build();
     }
 }
